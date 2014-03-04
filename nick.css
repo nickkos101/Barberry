@@ -1,0 +1,96 @@
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+	font-family: 'Oswald', sans-serif;
+}
+
+p, ul, ol {
+	font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+}
+
+button, input[type="text"], input[type="email"], input[type="password"] {
+	border:none;
+	border:1px solid #000;
+	background-color: #fff;
+	font-family: 'Oswald', sans-serif;
+	font-size:12px;
+	text-transform: uppercase;
+	font-weight: lighter;
+	padding:5px;
+}
+
+
+
+/* Base Classes */
+
+.container {
+	max-width: 1170px;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+.logo {
+	text-align: center;
+}
+
+/* Header Classes */
+
+.header {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	padding:5px;
+	border:3px solid #000;
+}
+
+.inner-wrapper {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	padding:10px;
+	border:1px solid #000;
+	position: relative;
+}
+
+.left-align {
+	font-family: 'Oswald', sans-serif;
+	font-weight: lighter;
+	font-size: 11px;
+	letter-spacing: 2px;
+	line-height: 22px;
+	position: absolute;
+	left:0px;
+	top:0px;
+	padding:10px;
+	margin:0px;
+}
+
+.right-align {
+	font-family: 'Oswald', sans-serif;
+	position: absolute;
+	right:0px;
+	top:0px;
+	padding:10px;
+	margin:0px;
+}
+
+.navigation {
+	border: 1px solid #000;
+	border-top:none;
+	padding:10px;
+}
+
+.navigation ul {
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	padding:0px;
+	margin:0px;
+}
+
+.navigation ul li {
+	display: inline-block;
+	vertical-align: top;
+	padding-left:25px;
+	padding-right: 25px;
+}
+
+.navigation li:first-of-type {
+	padding-left: 0px;
+}
