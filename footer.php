@@ -12,13 +12,13 @@
 				<h5>top rated products</h5>
 				<ul>
 					<li>
-						<a href=""><img src="images/trench.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
+						<a href=""><img src="images/product.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
 					</li>
 					<li>
-						<a href=""><img src="images/trench.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
+						<a href=""><img src="images/product.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
 					</li>
 					<li>
-						<a href=""><img src="images/trench.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
+						<a href=""><img src="images/product.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
 					</li>
 				</ul>
 			</div>
@@ -26,13 +26,13 @@
 				<h5>on sale</h5>
 				<ul>
 					<li>
-						<a href=""><img src="images/trench.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
+						<a href=""><img src="images/product.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
 					</li>
 					<li>
-						<a href=""><img src="images/trench.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
+						<a href=""><img src="images/product.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
 					</li>
 					<li>
-						<a href=""><img src="images/trench.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
+						<a href=""><img src="images/product.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
 					</li>
 				</ul>
 			</div>

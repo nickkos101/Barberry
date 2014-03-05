@@ -3,9 +3,13 @@
 <head>
 	<title></title>
 	<link href='normalize.css' type='text/css'>
+	<link href='style.css' rel='stylesheet' type='text/css'>
 	<link href='nick.css' rel='stylesheet' type='text/css'>
 	<link href='sara.css' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="function.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -21,14 +25,14 @@
 				</p>
 			</div>
 			<div class="navigation">
-					<ul>
-						<li>Home</li>
-						<li>Features</li>
-						<li>About Us</li>
-						<li>Portfolio</li>
-						<li>Blog</li>
-						<li>Contact</li>
-					</ul>
-				</div>
+				<ul>
+					<li>Home</li>
+					<li>Features</li>
+					<li>About Us</li>
+					<li>Portfolio</li>
+					<li>Blog</li>
+					<li>Contact</li>
+				</ul>
+			</div>
 		</div>
 	</div>

@@ -25,23 +25,51 @@
 		<h3>Products</h3>
 		<div class="product">
 			<img src="images/product.jpg">
-			<h4>Product Name</h4>
-			<p>$1450.00</p>
+			<div class="product-content">
+				<span>Product Category</span>
+				<h4>Product Name</h4>
+				<p>$1450</p>
+				<div class="product-metadata">
+					<p>Wishlist</p>
+					<p>Learn more</p>
+				</div>
+			</div>
 		</div>
 		<div class="product">
 			<img src="images/product.jpg">
-			<h4>Product Name</h4>
-			<p>$1450.00</p>
+			<div class="product-content">
+				<span>Product Category</span>
+				<h4>Product Name</h4>
+				<p>$1450</p>
+				<div class="product-metadata">
+					<p>Wishlist</p>
+					<p>Learn more</p>
+				</div>
+			</div>
 		</div>
 		<div class="product">
 			<img src="images/product.jpg">
-			<h4>Product Name</h4>
-			<p>$1450.00</p>
+			<div class="product-content">
+				<span>Product Category</span>
+				<h4>Product Name</h4>
+				<p>$1450</p>
+				<div class="product-metadata">
+					<p>Wishlist</p>
+					<p>Learn more</p>
+				</div>
+			</div>
 		</div>
 		<div class="product">
 			<img src="images/product.jpg">
-			<h4>Product Name</h4>
-			<p>$1450.00</p>
+			<div class="product-content">
+				<span>Product Category</span>
+				<h4>Product Name</h4>
+				<p>$1450</p>
+				<div class="product-metadata">
+					<p>Wishlist</p>
+					<p>Learn more</p>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="widget">

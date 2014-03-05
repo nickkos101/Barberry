@@ -2,7 +2,7 @@
 	font-size:0;
 }
 
-.right{
+.right {
 	float: right;
 }
 
@@ -19,28 +19,11 @@
 	margin-bottom: 20px;
 }
 
-.quarter-column {
-	width: 25%;
-	vertical-align: top;
-	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
-	display: inline-block;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
 .quarter-column p {
 	font-family: 'PT Sans', Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 22px;
 	margin: 0px;
-}
-
-.quarter-column:first-of-type{
-	padding-left: 0px;
-}
-
-.quarter-column:last-of-type {
-	padding-right: 0px;
 }
 
 .quarter-column:first-of-type img{
