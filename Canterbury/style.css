@@ -1,0 +1,297 @@
+/*
+Theme Name: Canterbury
+Theme URI: http://businessonmarketst.com
+Description: A Modular Theme, provided by BMS Express.
+Author: Nicholas Koskowski
+Version: 1.0
+Tags: multi-color, small business, corporate
+*/
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+	font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 12px;
+}
+
+a {
+	text-decoration: none;
+	color:#000;
+}
+
+p, ul, ol {
+	font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+ul {
+	padding-left:18px;
+}
+
+button, input[type="text"], input[type="email"], input[type="password"] {
+	border:none;
+	border:1px solid #000;
+	background-color: #fff;
+	font-family: 'Oswald', sans-serif;
+	font-size:12px;
+	text-transform: uppercase;
+	font-weight: lighter;
+	padding:5px;
+}
+
+input[type="text"] {
+	width: 100%;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+textarea {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	width: 100%;
+	resize: none;
+	border:1px solid #000;
+	min-height: 180px;
+}
+
+select {
+	width: 100%;
+	display: block;
+	padding:5px;
+	font-family: 'Oswald', sans-serif;
+	margin-bottom: 10px;
+}
+
+label {
+	font-size: 12px;
+	font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+table {
+	font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+	text-align: center;
+	min-width: 100%;
+	font-size: 14px;
+	border-collapse:collapse;
+}
+
+td {
+	border:none;
+	margin:0px;
+	padding:5px;
+}
+
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+
+caption, thead, th {
+	font-family: 'Oswald', sans-serif;
+	font-weight: lighter;
+	font-size:16px;
+}
+
+caption {
+	text-align: left;
+	font-size: 18px;
+	margin-bottom:10px;
+}
+
+/* Base Classes */
+
+.container {
+	max-width: 1170px;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+.lalign {
+	float: left;
+}
+
+.ralign {
+	float: right;
+}
+
+.half-column {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	width: 50%;
+	display: inline-block;
+	vertical-align:top;
+}
+
+.half-column:first-of-type {
+	padding-right: 25px;
+}
+
+.half-column:last-of-type {
+	padding-left: 25px;
+}
+
+.third-column {
+	width: 33.333%;
+	display:inline-block;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	vertical-align: top;
+	text-align: center;
+	padding-left: 15px;
+	padding-right: 15px
+}
+
+.third-column:first-of-type {
+	padding-right: 25px;
+	padding-left: 0px;
+}
+
+.third-column:last-of-type {
+	padding-right: 0px;
+	padding-left: 25px;
+}
+
+.quarter-column {
+	width: 25%;
+	vertical-align: top;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	display: inline-block;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.quarter-column:first-of-type{
+	padding-left: 0px;
+}
+
+.quarter-column:last-of-type {
+	padding-right: 0px;
+}
+
+/* Widget */
+
+.widget {
+	margin-top: 35px;
+	margin-bottom: 35px;
+	border-top:1px solid #000;
+	font-size: 0px;
+}
+
+.widget:first-of-type {
+	margin-top:0px;
+}
+
+.widget h3 {
+	font-size:28px;
+}
+
+
+.widget h4 {
+	font-size:24px;
+}
+
+.widget p, .widget ol, .widget ul, {
+	font-size: 12px;
+}
+
+/* Header Classes */
+
+.header {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	padding:5px;
+	border:3px solid #000;
+}
+
+.logo {
+	text-align: center;
+}
+
+.inner-wrapper {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	padding:10px;
+	border:1px solid #000;
+	position: relative;
+}
+
+.header .left-align {
+	font-family: 'Oswald', sans-serif;
+	font-weight: lighter;
+	font-size: 11px;
+	letter-spacing: 2px;
+	line-height: 22px;
+	position: absolute;
+	left:0px;
+	top:0px;
+	padding:10px;
+	margin:0px;
+}
+
+.header .right-align {
+	font-family: 'Oswald', sans-serif;
+	position: absolute;
+	right:0px;
+	top:0px;
+	padding:10px;
+	margin:0px;
+}
+
+.navigation {
+	border: 1px solid #000;
+	border-top:none;
+	padding:10px;
+}
+
+.navigation ul {
+	font-family: 'Oswald', sans-serif;
+	font-size: 14px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	padding:0px;
+	margin:0px;
+}
+
+.navigation ul li {
+	display: inline-block;
+	vertical-align: top;
+	padding-left:25px;
+	padding-right: 25px;
+}
+
+.navigation li:first-of-type {
+	padding-left: 0px;
+}
+
+/* Sharing */
+
+.sharing {
+	font-size: 16px;
+	font-family:  'Oswald', sans-serif;
+	font-weight: lighter;
+	vertical-align: middle;
+}
+
+.sharing ul {
+	display: inline-block;
+	padding:0px;
+	list-style: none;
+	vertical-align: middle;
+}
+
+.sharing ul li {
+	display: inline-block;
+	border:1px solid #888;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding-left: 7px;
+	padding-right: 7px;
+	padding-top: 7px;
+}

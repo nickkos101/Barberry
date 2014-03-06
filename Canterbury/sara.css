@@ -1,0 +1,100 @@
+.footer {
+	font-size:0;
+}
+
+.right {
+	float: right;
+}
+
+.quarter-column h5 {
+	font-family: 'Oswald', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	border-bottom: 2px solid #000;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+.quarter-column h5:first-of-type{
+	margin-bottom: 20px;
+}
+
+.quarter-column p {
+	font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 22px;
+	margin: 0px;
+}
+
+.quarter-column:first-of-type img{
+	width: 65px;
+	height: 65px;
+	float: left;
+	margin: 5px 15px 10px 0px;
+}
+
+.quarter-column:first-of-type img + p{
+	padding-bottom: 30px;
+}
+
+.quarter-column a {
+	text-decoration: underline;
+	color: #000;
+}
+.quarter-column a:hover{
+	text-decoration: none;
+}
+
+.quarter-column li {
+	font-size: 14px;
+}
+
+.quarter-column li a{
+	text-decoration: none;
+}
+.quarter-column li a:hover{
+	text-decoration: underline;
+}
+
+.quarter-column ul{
+	padding-left: 0px;
+}
+
+.quarter-column li{
+	border-bottom: dotted 1px #000;
+	list-style: none;
+	padding: 10px 0px 10px 0px;
+}
+.quarter-column li img{
+	width: 60px;
+	height: 79px;
+	border: 1px solid #fff;
+}
+.quarter-column li img:hover{
+	border: 1px solid #000;
+}
+.copyright{
+	width: 100%;
+	border: 2px solid #000;
+	padding: 10px 0px;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	text-transform: uppercase;
+	clear: both;
+}
+
+.copyright p{
+	margin: 0px;
+	margin-left: 20px;
+	width: auto;
+	font-size: 12px;
+	font-family: 'Oswald', Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	display: inline-block;
+	line-height: 22px;
+}
+
+.copyright img{
+	display: inline-block;
+	text-align: right;
+	margin-right: 20px;
+}
