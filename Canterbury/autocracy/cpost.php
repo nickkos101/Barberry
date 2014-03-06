@@ -12,8 +12,8 @@ $meta_boxes[] = array(
     'priority' => 'high',
     'fields' => array(
      array(
-        'name' => 'Video ID',
-        'id' => 'videolink',
+        'name' => 'SKU #',
+        'id' => 'SKU',
         'type' => 'text',
         ),
      array(
@@ -22,8 +22,13 @@ $meta_boxes[] = array(
         'type' => 'text',
         ),
      array(
-        'name' => 'Buy Link',
-        'id' => 'buylink',
+        'name' => 'Weight',
+        'id' => 'weight',
+        'type' => 'text',
+        ),
+     array(
+        'name' => 'Dimensions',
+        'id' => 'dimensions',
         'type' => 'text',
         ),
      ),

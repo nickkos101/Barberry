@@ -34,12 +34,81 @@ function canterbury_create_post_type() {
 		'public' => true,
 		'has_archive' => true,
 		'rewrite' => array('slug' => 'products'),
+		'supports' => array('title','editor','thumbnail', 'author', 'comments'),
+		'taxonomies' => array('category'), 
 		)
 	);
 }
 add_action('init', 'canterbury_create_post_type');
 
 
+//Review Img Class Filter
+
+add_filter('get_avatar','add_gravatar_class');
+
+function add_gravatar_class($class) {
+	$class = str_replace("class='avatar", "class='avatar review-photo", $class);
+	return $class;
+}
+
+//Taxonomy Additions
+
+add_action( 'init', 'create_canterbury_tax' );
+
+function create_canterbury_tax() {
+	register_taxonomy(
+		'brands',
+		'products',
+		array(
+			'label' => __( 'Brands' ),
+			'rewrite' => array( 'slug' => 'brand' ),
+			'hierarchical' => true,
+			)
+		);
+	register_taxonomy(
+		'colors',
+		'products',
+		array(
+			'label' => __( 'Colors' ),
+			'rewrite' => array( 'slug' => 'colors' ),
+			'hierarchical' => true,
+			)
+		);
+	register_taxonomy(
+		'sizes',
+		'products',
+		array(
+			'label' => __( 'Sizes' ),
+			'rewrite' => array( 'slug' => 'sizes' ),
+			'hierarchical' => true,
+			)
+		);
+}
+
+
+function get_brands($postID) {
+	$brandlist =  wp_get_post_terms($postID, 'brands');
+	foreach ($brandlist as $brand) {
+		echo $brand->name;
+		echo ', ';
+	}
+}
+
+function get_colors($postID) {
+	$colors =  wp_get_post_terms($postID, 'colors');
+	foreach ($colors as $color) {
+		echo $color->name;
+		echo ', ';
+	}
+}
+
+function get_sizes($postID) {
+	$sizes =  wp_get_post_terms($postID, 'sizes');
+	foreach ($sizes as $size) {
+		echo $size->name;
+		echo ', ';
+	}
+}
 
 
 ?>

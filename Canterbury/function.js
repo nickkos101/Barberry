@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	//Tab Selection
 
-	$('.tab-selection li').click(function(){
+	$('.tab-selection li, .r-form').click(function(){
 		var TabSelection = $(this).attr('selecttab');
 		TabSelection = '.'+TabSelection;
 		$('.selected').removeClass('selected');

@@ -2,48 +2,29 @@
 <div class="container">
 	<?php include 'sidebar.php'; ?>
 	<div class="products">
-		<div class="banner">
-			<div class="box light-treatment" style="height:200px; background-image:url('images/bannerbkg.png');">
-				<h3 class="bottom-right-corner">Welcome to the Shop</h3>
-			</div>
-		</div>
+		<?php the_content(); ?>
 		<h2>Products</h2>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="product">
-			<img src="images/product.jpg">
+			<?php if ( has_post_thumbnail() ) {
+				the_post_thumbnail();
+			}  
+			else {
+				echo '<img alt="missing" src="http://placehold.it/250">';
+			}
+			?>
 			<div class="product-content">
-				<span>Product Category</span>
-				<h4>Product Name</h4>
-				<p>$1450</p>
+				<span><?php $category = get_the_category(); echo $category[0]->cat_name; ?></span>
+				<h4><?php the_title(); ?></h4>
+				<p>$<?php autoc_get_postdata('price'); ?></p>
 				<div class="product-metadata">
 					<p>Wishlist</p>
-					<p>Learn more</p>
+					<p><a href="<?php the_permalink(); ?>">Learn more</a></p>
 				</div>
 			</div>
 		</div>
-		<div class="product">
-			<img src="images/product.jpg">
-			<div class="product-content">
-				<span>Product Category</span>
-				<h4>Product Name</h4>
-				<p>$1450</p>
-				<div class="product-metadata">
-					<p>Wishlist</p>
-					<p>Learn more</p>
-				</div>
-			</div>
-		</div>
-		<div class="product">
-			<img src="images/product.jpg">
-			<div class="product-content">
-				<span>Product Category</span>
-				<h4>Product Name</h4>
-				<p>$1450</p>
-				<div class="product-metadata">
-					<p>Wishlist</p>
-					<p>Learn more</p>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php endwhile; else: ?>
+<?php endif; ?>
+</div>
 </div>
 <?php get_footer(); ?>
