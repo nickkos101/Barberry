@@ -14,19 +14,25 @@
 			</div>
 			<p class="price">From: <b>$<?php echo autoc_get_postdata('price'); ?></b></p>
 			<?php the_excerpt(); ?>
-			<label>Color</label>
-			<select>
-				<option>Black</option>
-				<option>White</option>
-				<option>Gray</option>
-			</select>
-			<label>Sizes</label>
-			<select>
-				<option>Medium</option>
-				<option>Large</option>
-				<option>XL</option>
-			</select>
-			<button>Wishlist</button>
+			<p>
+				<label>Color</label>
+				<select>
+					<option>Black</option>
+					<option>White</option>
+					<option>Gray</option>
+				</select>
+			</p>
+			<p>
+				<label>Sizes</label>
+				<select>
+					<option>Medium</option>
+					<option>Large</option>
+					<option>XL</option>
+				</select>
+			</p>
+			<p>
+				<button>Wishlist</button>
+			</p>
 			<div class="product-data">
 				<ul>
 					<li><b>SKU:</b> <?php echo autoc_get_postdata('SKU') ?></li>
@@ -52,7 +58,7 @@
 					<li selecttab="description">Description</li>
 					<li selecttab="info">Additional Info</li>
 					<li selecttab="reviews">Reviews (<?php comments_number( '0', '1', '%' ); ?>)</li>
-					<li selecttab="about">About <?php the_title(); ?></li>
+					<li selecttab="about"><?php the_title(); ?> Brands</li>
 				</ul>
 			</div>
 			<div class="tab-column">
@@ -72,15 +78,19 @@
 				<div class="tab reviews">
 					<h4><?php comments_number( '0', '1', '%' ); ?> Reviews for <?php the_title(); ?></h4>
 					<?php get_template_part('reviews'); ?>
-						<button>Add Reveiw</button>
-					</div>
-					<div class="tab comments">
-						<?php comment_form(); ?>
-					</div>
+					<button>Add Reveiw</button>
+				</div>
+				<div class="tab comments">
+					<?php comment_form(); ?>
+				</div>
+				<div class="tab about">
+					<h4><?php the_title(); ?> Brands</h4>
+					<?php list_info($post->ID); ?>
 				</div>
 			</div>
-		</div>	
-	<?php endwhile; else: ?>
+		</div>
+	</div>	
+<?php endwhile; else: ?>
 <?php endif; ?>
 </div>
 </div>

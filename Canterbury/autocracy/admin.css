@@ -20,6 +20,12 @@ input[type=text] {
 	display: block;
 }
 
+textarea {
+	resize:none;
+	min-width: 420px;
+	min-height: 120px;
+}
+
 .module-fullwidth input[type=text] {
 	clear:none;
 	display: inline;

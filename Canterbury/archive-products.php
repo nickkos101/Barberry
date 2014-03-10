@@ -15,8 +15,8 @@
 			?>
 			<div class="product-content">
 				<span><?php $category = get_the_category(); echo $category[0]->cat_name; ?></span>
-				<h4><?php the_title(); ?></h4>
-				<p>$<?php autoc_get_postdata('price'); ?></p>
+				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+				<p>$<?php echo autoc_get_postdata('price'); ?></p>
 				<div class="product-metadata">
 					<p>Wishlist</p>
 					<p><a href="<?php the_permalink(); ?>">Learn more</a></p>

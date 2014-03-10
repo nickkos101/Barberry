@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title><?php wp_title(); ?></title>
+	<?php $optionname= 'main_theme_options'; $mainoptions = get_option($optionname); ?>
 	<meta http-equiv="Content-Type" content="text/html;">
 	<link href='<?php echo get_template_directory_uri(); ?>/normalize.css' type='text/css'>
 	<link href='<?php echo get_template_directory_uri(); ?>/style.css' rel='stylesheet' type='text/css'>
@@ -14,13 +15,25 @@
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png"/>
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png"/>
 	<?php wp_head(); ?>
+	<?php 
+	echo $mainoptions['ganylitics'];
+	?>
+	 <?php get_template_part( 'style', 'compiler' ); ?>
 </head>
 <body>
 	<div class="container">
 		<div class="header">
 			<div class="inner-wrapper">
 				<p class="logo">
-					<a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png"></a>
+					<a href="<?php echo get_site_url(); ?>">
+						<?php if ($mainoptions['logo'] != '') {
+							echo '<img src="'.$mainoptions['logo'].'">';
+						} 
+						else {
+							echo '<img src="'.get_template_directory_uri().'/images/logo.png">';
+						}
+						?>
+					</a>
 				</p>
 				<p class="left-align">78 2ND HOUSE RD MONTAUK, NY, 11954 <br/>CONTACT@BARBERRY.COM</p>
 				<p class="right-align">

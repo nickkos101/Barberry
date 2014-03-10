@@ -110,5 +110,23 @@ function get_sizes($postID) {
 	}
 }
 
+function list_info($postID) {
+	$brandlist =  wp_get_post_terms($postID, 'brands');
+	foreach ($brandlist as $brand) {
+		echo "<h5>";
+		echo $brand->name;
+		echo "</h5>";
+		echo "<p>";
+		if($brand->description === '') {
+			echo "DESCRIPTION TEXT FOR - ".$brand->name." IS MISSING!";
+		}
+			else {
+				echo $brand->description;
+			}
+			echo "</p>";
+		}
 
-?>
+	}
+
+
+	?>
