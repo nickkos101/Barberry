@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php $optionname= 'main_theme_options'; $mainoptions = get_option($optionname); ?>
 <div class="slider">
 	<div class="container">
 		<div class="slide">
@@ -21,86 +22,75 @@
 			</div>
 		</div>
 	</div>
+	<?php if ($mainoptions['showproducts'] == 1) { ?>
 	<div class="widget">
 		<h3>Products</h3>
+		<?php query_posts(array('post_type' => 'products', 'posts_per_page' => 4)); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="product">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/product.jpg">
+			<?php if ( has_post_thumbnail() ) {
+				the_post_thumbnail();
+			}  
+			else {
+				echo '<img alt="missing" src="http://placehold.it/250">';
+			}
+			?>
 			<div class="product-content">
-				<span>Product Category</span>
-				<h4>Product Name</h4>
-				<p>$1450</p>
+				<span><?php $category = get_the_category(); echo $category[0]->cat_name; ?></span>
+				<h4><?php the_title(); ?></h4>
+				<p>$<?php echo autoc_get_postdata('price'); ?></p>
 				<div class="product-metadata">
 					<p>Wishlist</p>
-					<p>Learn more</p>
+					<p><a href="<?php the_permalink(); ?>">Learn more</a></p>
 				</div>
 			</div>
 		</div>
-		<div class="product">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/product.jpg">
-			<div class="product-content">
-				<span>Product Category</span>
-				<h4>Product Name</h4>
-				<p>$1450</p>
-				<div class="product-metadata">
-					<p>Wishlist</p>
-					<p>Learn more</p>
-				</div>
-			</div>
-		</div>
-		<div class="product">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/product.jpg">
-			<div class="product-content">
-				<span>Product Category</span>
-				<h4>Product Name</h4>
-				<p>$1450</p>
-				<div class="product-metadata">
-					<p>Wishlist</p>
-					<p>Learn more</p>
-				</div>
-			</div>
-		</div>
-		<div class="product">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/product.jpg">
-			<div class="product-content">
-				<span>Product Category</span>
-				<h4>Product Name</h4>
-				<p>$1450</p>
-				<div class="product-metadata">
-					<p>Wishlist</p>
-					<p>Learn more</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="widget">
-		<h3>Brands</h3>
-		<div class="brands">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/brand.jpg">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/brand.jpg">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/brand.jpg">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/brand.jpg">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/brand.jpg">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/brand.jpg">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/brand.jpg">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/brand.jpg">
-		</div>
-	</div>
-	<div class="widget">
-		<h3>Latest News</h3>
-		<div class="third-column">
-			<h4>This is a headline</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut.</p>
-		</div>
+	<?php endwhile; endif; ?>
+</div>
+<?php } ?>
+<?php if ($mainoptions['showbrands'] == 1) { ?>
+<div class="widget">
+	<h3>Brands</h3>
+	<div class="brands">
+		<?php
+		$brandlist =  get_terms('brands');
+		foreach ($brandlist as $brand) {
 
-		<div class="third-column">
-			<h4>This is a headline</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut.</p>
-		</div>
-		<div class="third-column">
-			<h4>This is a headline</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
-		</div>
+			$t_ID = $brand->term_id;
+			$term_data = get_option("taxonomy_$t_ID");
+			$imageURL = $term_data['taxonomy_image_url'];
+
+			if(!isset($imageURL)) {
+				echo '<p>';
+				echo 'Missing image for brand '.$brand->name;
+				echo '</p>';
+			}
+			else {
+				echo '<img src="'.$imageURL.'">';
+			}
+		}
+		?>
 	</div>
+</div>
+<?php } ?>
+<?php if ($mainoptions['flexgrid'] == 1) { ?>
+<div class="widget">
+	<h3>Latest News</h3>
+	<div class="third-column">
+		<h4>This is a headline</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut.</p>
+	</div>
+
+	<div class="third-column">
+		<h4>This is a headline</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut.</p>
+	</div>
+	<div class="third-column">
+		<h4>This is a headline</h4>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+	</div>
+</div>
+<?php } ?>
 </div>
 </div>
 <?php get_footer(); ?>

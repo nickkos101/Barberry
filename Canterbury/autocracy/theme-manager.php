@@ -20,12 +20,12 @@ function main_theme_options_do_page() {
     <?php endif; ?>
 
     <form method="post" action="options.php">
-       <?php
-       settings_fields('main_options');
-       $optionname= 'main_theme_options';
-       $mainoptions = get_option($optionname);
-       ?>
-       <div class="panel-nav">
+     <?php
+     settings_fields('main_options');
+     $optionname= 'main_theme_options';
+     $mainoptions = get_option($optionname);
+     ?>
+     <div class="panel-nav">
         <ul>
             <h2>Theme Options</h2>
             <li><img src="<?php echo get_template_directory_uri(); ?>/autocracy/Images/servicepage-bd.png"><p>Homepage Options</p></li>
@@ -38,6 +38,51 @@ function main_theme_options_do_page() {
     </div>
     <div class="module-fullwidth">
         <h2>Homepage Options</h2>
+        <p>
+            <label>Show Products?</label>
+            <?php autoc_def_checkbox($optionname, 'showproducts'); ?>
+        </p>
+        <p>
+            <label>Show Brands?</label>
+            <?php autoc_def_checkbox($optionname, 'showbrands'); ?>
+        </p>
+        <p>
+            <label>Show Content?</label>
+            <?php autoc_def_checkbox($optionname, 'flexgrid'); ?>
+        </p>
+        <div class="module-third">
+            <h3>Content 1 Block</h3>
+            <p>
+                <label>Content Title</label>
+                <?php autoc_def_textfield($optionname, 'content1blocktitle'); ?>
+            </p>
+            <p>
+                <label>Content Text</label>
+                <?php autoc_def_textarea($optionname, 'content1blocktext'); ?>
+            </p>
+        </div>
+        <div class="module-third">
+            <h3>Content 2 Block</h3>
+            <p>
+                <label>Content Title</label>
+                <?php autoc_def_textfield($optionname, 'content2blocktitle'); ?>
+            </p>
+            <p>
+                <label>Content Text</label>
+                <?php autoc_def_textarea($optionname, 'content2blocktext'); ?>
+            </p>
+        </div>
+        <div class="module-third">
+            <h3>Content 3 Block</h3>
+            <p>
+                <label>Content Title</label>
+                <?php autoc_def_textfield($optionname, 'content3blocktitle'); ?>
+            </p>
+            <p>
+                <label>Content Text</label>
+                <?php autoc_def_textarea($optionname, 'content3blocktext'); ?>
+            </p>
+        </div>
     </div>
     <div class="module-fullwidth">
         <h2>Branding Options</h2>
@@ -52,6 +97,10 @@ function main_theme_options_do_page() {
         <p>
             <label>Content Color</label>
             <?php autoc_def_textfield($optionname, 'contentcolors'); ?>
+        </p>
+        <p>
+            <label>Border Colors</label>
+            <?php autoc_def_textfield($optionname, 'bordercolors'); ?>
         </p>
         <p>
             <label>Background Color</label>

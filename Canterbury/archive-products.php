@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 <div class="container">
-	<?php include 'sidebar.php'; ?>
+<div class="left-sb">
+	<?php get_sidebar(); ?>
+</div>
 	<div class="products">
 		<?php the_content(); ?>
 		<h2>Products</h2>

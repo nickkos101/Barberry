@@ -11,6 +11,17 @@ function autoc_def_textfield($optioname, $id) {
 	echo 'value="'.__($option[$id]).'" />'; 
 }
 
+function autoc_def_checkbox($optioname, $id) {
+
+        $option = get_option($optioname);
+
+        echo '<input type="checkbox" size="36" ';
+        echo 'name='.$optioname. '['. $id .'] ';
+        echo 'value="1" '; 
+        checked('1', $option[$id]);
+        echo '/>';
+}
+
 function autoc_def_textarea($optioname, $id) {
 
 	$option = get_option($optioname);
@@ -26,12 +37,10 @@ function autoc_def_uploadarea($optioname, $id) {
 
         $option = get_option($optioname);
 
-        echo '<label for="upload_image">';
         echo '<input class="upload_image" type="text" size="36" ';
         echo 'name='.$optioname. '['. $id .'] ';
         echo 'value="'.__($option[$id]).'" />'; 
         echo '<input class="upload_image_button" type="button" value="Upload Image" />';
-        echo '</label>';
 }
 
 //Accessor Functions
