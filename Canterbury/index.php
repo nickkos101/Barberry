@@ -23,13 +23,13 @@
 		<div class="half-column">
 			<div class="box ctext">
 				<div class="inner-wrapper">
-					<h2>GET 25% OFF WHEN YOU SPEND $100</h2>
+					<h2><?php echo $mainoptions['leftblocktitle']; ?></h2>
 				</div>
 			</div>
-		</div><div class="half-column ctext">
-		<div class="box">
+		</div><div class="half-column">
+		<div class="box ctext">
 			<div class="inner-wrapper">
-				<h2>FREE SHIPPING ON ALL ORDERS</h2>
+				<h2><?php echo $mainoptions['rightblocktitle']; ?></h2>
 			</div>
 		</div>
 	</div>
@@ -86,19 +86,18 @@
 <?php } ?>
 <?php if ($mainoptions['flexgrid'] == 1) { ?>
 <div class="widget">
-	<h3>Latest News</h3>
 	<div class="third-column">
-		<h4>This is a headline</h4>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut.</p>
+		<h4><?php echo $mainoptions['content1blocktitle']; ?></h4>
+		<p><?php echo $mainoptions['content1blocktext']; ?></p>
 	</div>
 
 	<div class="third-column">
-		<h4>This is a headline</h4>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut.</p>
+		<h4><?php echo $mainoptions['content2blocktitle']; ?></h4>
+		<p><?php echo $mainoptions['content2blocktext']; ?></p>
 	</div>
 	<div class="third-column">
-		<h4>This is a headline</h4>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+		<h4><?php echo $mainoptions['content3blocktitle']; ?></h4>
+		<p><?php echo $mainoptions['content3blocktext']; ?></p>
 	</div>
 </div>
 <?php } ?>

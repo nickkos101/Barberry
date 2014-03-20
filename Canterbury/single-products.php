@@ -10,7 +10,7 @@
 		<div class="half-column">
 			<h2><?php the_title(); ?></h2>
 			<div class="review-data">
-				<span class="rating">&#9733; &#9733; &#9733; &#9733; &#9734; <i><?php comments_number( '0', '1', '%' ); ?> Reviews | <a class="r-form" selecttab="comments" href="#commentform">Write a Review</a></i></span>
+				<span class="rating"><?php the_rating(); ?><i><?php comments_number( '0', '1', '%' ); ?> Reviews | <a class="r-form" selecttab="comments" href="#commentform">Write a Review</a></i></span>
 			</div>
 			<p class="price">From: <b>$<?php echo autoc_get_postdata('price'); ?></b></p>
 			<?php the_excerpt(); ?>
@@ -77,11 +77,13 @@
 				</div>
 				<div class="tab reviews">
 					<h4><?php comments_number( '0', '1', '%' ); ?> Reviews for <?php the_title(); ?></h4>
-					<?php get_template_part('reviews'); ?>
+					<ol>
+						<?php comments_template(); ?>
+					</ol>
 					<button>Add Reveiw</button>
 				</div>
 				<div class="tab comments">
-					<?php comment_form(); ?>
+					<?php comment_form(array( 'title_reply' => 'Post a Review' )); ?>
 				</div>
 				<div class="tab about">
 					<h4><?php the_title(); ?> Brands</h4>

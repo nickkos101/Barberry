@@ -1,7 +1,7 @@
 <?php 
 
 include 'autocracy/autocracy.php';
-
+include 'rate/rate.php';
 //Theme Supports
 
 add_theme_support( 'post-thumbnails' );
@@ -19,10 +19,55 @@ register_sidebar( array(
 	'description' => __( 'The blog sidebar appears on the right hand side.', 'wpb' ),
 	'before_widget' => '<div class="widget">',
 	'after_widget' => '</div>',
-	'before_title' => '<h4">',
+	'before_title' => '<h4>',
 	'after_title' => '</h4>',
 	) 
 );
+
+register_sidebar( array(
+	'name' => __( 'Footer Column 1', 'wpb' ),
+	'id' => 'footer-col1',
+	'description' => __( 'The widgets placed here will appear in the footer columns.', 'wpb' ),
+	'before_widget' => '<div class="widget">',
+	'after_widget' => '</div>',
+	'before_title' => '<h5>',
+	'after_title' => '</h5>',
+	) 
+);
+
+register_sidebar( array(
+	'name' => __( 'Footer Column 2', 'wpb' ),
+	'id' => 'footer-col2',
+	'description' => __( 'The widgets placed here will appear in the footer columns.', 'wpb' ),
+	'before_widget' => '<div class="widget">',
+	'after_widget' => '</div>',
+	'before_title' => '<h5>',
+	'after_title' => '</h5>',
+	) 
+);
+
+register_sidebar( array(
+	'name' => __( 'Footer Column 3', 'wpb' ),
+	'id' => 'footer-col3',
+	'description' => __( 'The widgets placed here will appear in the footer columns.', 'wpb' ),
+	'before_widget' => '<div class="widget">',
+	'after_widget' => '</div>',
+	'before_title' => '<h5>',
+	'after_title' => '</h5>',
+	) 
+);
+
+register_sidebar( array(
+	'name' => __( 'Footer Column 4', 'wpb' ),
+	'id' => 'footer-col4',
+	'description' => __( 'The widgets placed here will appear in the footer columns.', 'wpb' ),
+	'before_widget' => '<div class="widget">',
+	'after_widget' => '</div>',
+	'before_title' => '<h5>',
+	'after_title' => '</h5>',
+	) 
+);
+
 
 //Custom Post Types
 function canterbury_create_post_type() {
