@@ -35,7 +35,7 @@
 						?>
 					</a>
 				</p>
-				<p class="left-align">78 2ND HOUSE RD MONTAUK, NY, 11954 <br/>CONTACT@BARBERRY.COM</p>
+				<p class="left-align"><?php echo $mainoptions['contactemail']; ?> <br/><?php echo $mainoptions['physicaladdress']; ?> </p>
 				<p class="right-align">
 					<button>My Account</button>
 					<?php

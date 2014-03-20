@@ -1,49 +1,20 @@
 	<div class="footer">
 		<div class="container">
 			<div class="quarter-column">
-				<h5>about us</h5>
-				<img src="<?php echo get_template_directory_uri(); ?>/images/bar_icon.jpg" alt="shopping bag">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis que porta sapien nec leo convallis.</p>
-				<p>t: 1-866-950-1638</p>
-				<p>f: 1-866-950-1639</p>
-				<p>e: <a href="mailto:info@yourcompany.com">contact@barberry.com</a></p>
+					<?php dynamic_sidebar( 'footer-col1' ); ?>
 			</div>
 			<div class="quarter-column">
-				<h5>top rated products</h5>
-				<ul>
-					<li>
-						<a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/product.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
-					</li>
-					<li>
-						<a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/product.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
-					</li>
-					<li>
-						<a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/product.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
-					</li>
-				</ul>
+					<?php dynamic_sidebar( 'footer-col2' ); ?>
 			</div>
 			<div class="quarter-column">
-				<h5>on sale</h5>
-				<ul>
-					<li>
-						<a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/product.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
-					</li>
-					<li>
-						<a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/product.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
-					</li>
-					<li>
-						<a href=""><img src="<?php echo get_template_directory_uri(); ?>/images/product.jpg" alt="Brit 'Mottram' Poplin Trench">Brit 'Mottram' Poplin Trench</a>
-					</li>
-				</ul>
+					<?php dynamic_sidebar( 'footer-col3' ); ?>
 			</div>
 			<div class="quarter-column">
-				<h5>product tags</h5>
-
-				<h5>barberry social</h5>
+					<?php dynamic_sidebar( 'footer-col4' ); ?>
 			</div>
 
 			<div class="copyright">
-				<p>&copy;2013 - Barberry woocommerce theme. created by temashdesign</p>
+				<p>&copy;2014 - Theme by Business on Market St.</p>
 				<img src="<?php echo get_template_directory_uri(); ?>/images/credit_cards.png" alt="credit cards" class="right">
 			</div>
 		</div>

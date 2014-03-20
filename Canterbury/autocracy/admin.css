@@ -67,6 +67,25 @@ label {
 	padding-right: 0px;
 }
 
+.module-half {
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.module-half:first-of-type {
+	padding-left:0px;
+	padding-right: 20px;
+}
+
+.module-half:last-of-type {
+	padding-left: 20px;
+	padding-right: 0px;
+}
+
 .panel-nav {
 	width: 100%;
 	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;

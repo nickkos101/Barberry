@@ -31,8 +31,6 @@ function main_theme_options_do_page() {
             <li><img src="<?php echo get_template_directory_uri(); ?>/autocracy/Images/servicepage-bd.png"><p>Homepage Options</p></li>
             <li><img src="<?php echo get_template_directory_uri(); ?>/autocracy/Images/servicepage-branding.png"><p>Branding Options</p></li>
             <li><img src="<?php echo get_template_directory_uri(); ?>/autocracy/Images/servicepage-marketing.png"><p>Marketing / SEO Options</p></li>
-            <li><img src="<?php echo get_template_directory_uri(); ?>/autocracy/Images/servicepage-planning.png"><p>Content Options</p></li>
-            <li><img src="<?php echo get_template_directory_uri(); ?>/autocracy/Images/servicepage-webdev.png"><p>Technical Options</p></li>
         </ul>
         <div class="close-button">X</div>
     </div>
@@ -83,64 +81,79 @@ function main_theme_options_do_page() {
                 <?php autoc_def_textarea($optionname, 'content3blocktext'); ?>
             </p>
         </div>
-    </div>
-    <div class="module-fullwidth">
-        <h2>Branding Options</h2>
-        <p>
-            <label>Logo</label>
-            <?php autoc_def_uploadarea($optionname, 'logo'); ?>
-        </p>
-        <p>
-            <label>Headline Colors</label>
-            <?php autoc_def_textfield($optionname, 'headlinecolors'); ?>
-        </p>
-        <p>
-            <label>Content Color</label>
-            <?php autoc_def_textfield($optionname, 'contentcolors'); ?>
-        </p>
-        <p>
-            <label>Border Colors</label>
-            <?php autoc_def_textfield($optionname, 'bordercolors'); ?>
-        </p>
-        <p>
-            <label>Background Color</label>
-            <?php autoc_def_textfield($optionname, 'bkgcolor'); ?>
-        </p>
-        <p>
-            <label>Background Image</label>
-            <?php autoc_def_uploadarea($optionname, 'bkgimg'); ?>
+        <div class="module-half">
+            <h3>Left Block</h3>
+            <p>
+                <label>Content Title</label>
+                <?php autoc_def_textfield($optionname, 'leftblocktitle'); ?>
+            </p>
+        </div>
+        <div class="module-half">
+           <h3>Right Block</h3>
+           <p>
+            <label>Content Title</label>
+            <?php autoc_def_textfield($optionname, 'rightblocktitle'); ?>
         </p>
     </div>
-    <div class="module-fullwidth">
-        <h2>Marketing / SEO Options</h2>
-        <p>
-            <label>Contact Email</label>
-            <?php autoc_def_textfield($optionname, 'contactemail'); ?>
-        </p>
-        <p>
-            <label>Google Analytics Code</label>
-            <?php autoc_def_textarea($optionname, 'ganylitics'); ?>
-        </p>
-        <h3>Sharing Options</h3>
-        <p>
-            <label>Facebook Profile</label>
-            <?php autoc_def_textfield($optionname, 'facebookprofile'); ?>
-        </p>
-        <p>
-            <label>Twitter Profile</label>
-            <?php autoc_def_textfield($optionname, 'twitterprofile'); ?>
-        </p>
-        <p>
-            <label>Google + Profile</label>
-            <?php autoc_def_textfield($optionname, 'gplusprofile'); ?>
-        </p>
-    </div>
-    <div class="module-fullwidth">
-        <h2>Technical Options</h2>
-    </div>
-    <p class="submit">
-        <input type="submit" class="button-primary" value="<?php _e('Save Options', 'sampletheme'); ?>" />
+</div>
+<div class="module-fullwidth">
+    <h2>Branding Options</h2>
+    <p>
+        <label>Logo</label>
+        <?php autoc_def_uploadarea($optionname, 'logo'); ?>
     </p>
+    <p>
+        <label>Headline Colors</label>
+        <?php autoc_def_textfield($optionname, 'headlinecolors'); ?>
+    </p>
+    <p>
+        <label>Content Color</label>
+        <?php autoc_def_textfield($optionname, 'contentcolors'); ?>
+    </p>
+    <p>
+        <label>Border Colors</label>
+        <?php autoc_def_textfield($optionname, 'bordercolors'); ?>
+    </p>
+    <p>
+        <label>Background Color</label>
+        <?php autoc_def_textfield($optionname, 'bkgcolor'); ?>
+    </p>
+    <p>
+        <label>Background Image</label>
+        <?php autoc_def_uploadarea($optionname, 'bkgimg'); ?>
+    </p>
+</div>
+<div class="module-fullwidth">
+    <h2>Marketing / SEO Options</h2>
+    <p>
+        <label>Contact Email</label>
+        <?php autoc_def_textfield($optionname, 'contactemail'); ?>
+    </p>
+    <p>
+        <label>Physical Address</label>
+        <?php autoc_def_textfield($optionname, 'physicaladdress'); ?>
+    </p>
+    <p>
+        <label>Google Analytics Code</label>
+        <?php autoc_def_textarea($optionname, 'ganylitics'); ?>
+    </p>
+    <h3>Sharing Options</h3>
+    <p>
+        <label>Facebook Profile</label>
+        <?php autoc_def_textfield($optionname, 'facebookprofile'); ?>
+    </p>
+    <p>
+        <label>Twitter Profile</label>
+        <?php autoc_def_textfield($optionname, 'twitterprofile'); ?>
+    </p>
+    <p>
+        <label>Google + Profile</label>
+        <?php autoc_def_textfield($optionname, 'gplusprofile'); ?>
+    </p>
+</div>
+<p class="submit">
+    <input type="submit" class="button-primary" value="<?php _e('Save Options', 'sampletheme'); ?>" />
+</p>
 </form>
 
 </div>

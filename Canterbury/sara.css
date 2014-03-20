@@ -1,4 +1,5 @@
 .footer {
+	margin-bottom: 25px;
 	font-size:0;
 }
 
@@ -24,17 +25,6 @@
 	font-size: 14px;
 	line-height: 22px;
 	margin: 0px;
-}
-
-.quarter-column:first-of-type img{
-	width: 65px;
-	height: 65px;
-	float: left;
-	margin: 5px 15px 10px 0px;
-}
-
-.quarter-column:first-of-type img + p{
-	padding-bottom: 30px;
 }
 
 .quarter-column a {
@@ -65,14 +55,7 @@
 	list-style: none;
 	padding: 10px 0px 10px 0px;
 }
-.quarter-column li img{
-	width: 60px;
-	height: 79px;
-	border: 1px solid #fff;
-}
-.quarter-column li img:hover{
-	border: 1px solid #000;
-}
+
 .copyright{
 	width: 100%;
 	border: 2px solid #000;
