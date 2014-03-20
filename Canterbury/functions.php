@@ -38,6 +38,17 @@ function canterbury_create_post_type() {
 		'taxonomies' => array('category'), 
 		)
 	);
+	register_post_type('slides', array(
+		'labels' => array(
+			'name' => __('Slides'),
+			'singular_name' => __('slide')
+			),
+		'public' => true,
+		'has_archive' => true,
+		'rewrite' => array('slug' => 'slides'),
+		'supports' => array('title','editor','thumbnail', 'author'),
+		)
+	);
 }
 add_action('init', 'canterbury_create_post_type');
 

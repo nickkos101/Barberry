@@ -7,6 +7,10 @@ Version: 1.0
 Tags: multi-color, small business, corporate
 */
 
+body {
+  margin: 0 !important;
+}
+
 h1,h2,h3,h4,h5,h6 {
 	font-weight: normal;
 	font-family: 'Oswald', sans-serif;
@@ -265,6 +269,26 @@ caption {
 	top:0px;
 	padding:10px;
 	margin:0px;
+}
+
+.header .right-align select {
+	color:#fff;
+	background-color: #000;
+	border: none;
+	padding:15px;
+	padding-left: 25px;
+	padding-right: 25px;
+	text-align: center;
+	margin:0px;
+	-moz-box-shadow: inset rgba(255, 255, 255, 0.5) 0 0 0 1px !important;
+	-webkit-box-shadow: inset rgba(255, 255, 255, 0.5) 0 0 0 1px !important;
+	box-shadow: inset rgba(255, 255, 255, 0.5) 0 0 0 1px !important;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: lighter;
+	display: inline-block;
+	width: auto;
 }
 
 .navigation {

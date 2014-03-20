@@ -10,7 +10,7 @@
 	<link href='<?php echo get_template_directory_uri(); ?>/sara.css' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/function.js"></script>
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png"/>
 	<link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png"/>
@@ -18,7 +18,7 @@
 	<?php 
 	echo $mainoptions['ganylitics'];
 	?>
-	 <?php get_template_part( 'style', 'compiler' ); ?>
+	<?php get_template_part( 'style', 'compiler' ); ?>
 </head>
 <body>
 	<div class="container">
@@ -38,7 +38,11 @@
 				<p class="left-align">78 2ND HOUSE RD MONTAUK, NY, 11954 <br/>CONTACT@BARBERRY.COM</p>
 				<p class="right-align">
 					<button>My Account</button>
-					<button>English</button>
+					<?php
+					if( function_exists('pll_the_languages') ) {
+						pll_the_languages(array('dropdown'=>1));		
+					}
+					?>
 				</p>
 			</div>
 			<div class="navigation">

@@ -1,11 +1,22 @@
 <?php get_header(); ?>
 <?php $optionname= 'main_theme_options'; $mainoptions = get_option($optionname); ?>
 <div class="slider">
+	<div class="slider-stripe"></div>
 	<div class="container">
+		<?php query_posts(array('post_type' => 'products', 'posts_per_page' => 4)); ?>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="slide">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/slide.png">
+			<?php if ( has_post_thumbnail() ) {
+				the_post_thumbnail();
+			}  
+			?>
+			<div class="overlay">
+				<h2><?php the_title(); ?></h2>
+				<?php the_excerpt(); ?>
+			</div>
 		</div>
-	</div>
+	<?php endwhile; endif; ?>
+</div>
 </div>
 <div class="container">
 	<div class="hp-content">

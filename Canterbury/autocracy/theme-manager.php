@@ -8,7 +8,7 @@ function main_theme_options_do_page() {
     wp_enqueue_style('thickbox');
     wp_enqueue_style( 'style-name', get_template_directory_uri().'/autocracy/admin.css' );
     wp_enqueue_style( 'style-font', 'http://fonts.googleapis.com/css?family=Rokkitt' );
-    wp_enqueue_script('upload_enable', get_template_directory_uri() . 'autocracy/theme-options.js', false, null);
+    wp_enqueue_script('upload_enable', get_template_directory_uri() . '/autocracy/theme-options.js', false, null);
     ?>
     <div class="wrap">
         <?php

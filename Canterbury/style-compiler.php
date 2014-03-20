@@ -14,6 +14,9 @@
 		background-image:url(<?php echo $mainoptions['bkgimg']; ?>);
 	}
 	.product-content span {
-			background-color: <?php echo $mainoptions['bkgcolor']; ?>;
+		background-color: <?php echo $mainoptions['bkgcolor']; ?>;
+	}
+	.slider-stripe {
+		background-color: <?php echo $mainoptions['headlinecolors']; ?>;
 	}
 	</style>

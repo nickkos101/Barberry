@@ -9,4 +9,6 @@ $(document).ready(function(){
 		$(TabSelection).addClass('selected');
 	});
 
+	//Slider Code
+
 });

@@ -3,7 +3,7 @@
 // Re-define meta box path and URL
 define('RWMB_URL', trailingslashit(get_stylesheet_directory_uri() . '/autocracy/API/'));
 define('RWMB_DIR', trailingslashit(get_template_directory() . '/autocracy/API/'));
-wp_enqueue_script('my-theme-options', get_template_directory_uri() . '/autocracy/API/js/theme-options.js', false, null);
+wp_enqueue_script('upload_enable', get_template_directory_uri() . '/autocracy/theme-options.js', false, null);
 // Include the meta box script
 require_once RWMB_DIR . '/meta-box.php';
 include get_template_directory() . '/autocracy/cpost.php';
