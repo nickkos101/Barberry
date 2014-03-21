@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 <div class="container">
 	<div class="page-moniker">
-		<h2 class=""><?php the_title(); ?> | <span>Your Blog Description here</span></h2>
+		<h2 class=""><?php the_title(); ?> | <span><?php echo get_bloginfo('description'); ?></span></h2>
 		<span class="ralign breadcrumbs">HOME > <?php the_title(); ?></span>
 	</div>
 	<div class="content">
@@ -24,6 +24,6 @@
 	<?php endwhile; else: ?>
 <?php endif; ?>
 </div>
-<?php include 'sidebar.php'; ?>
+<?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

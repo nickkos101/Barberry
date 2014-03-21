@@ -26,7 +26,6 @@
 	?>
 	
 	<p>Comments are closed</p>
-	
 	<?php endif; ?>
 
 </div><!-- #comments -->

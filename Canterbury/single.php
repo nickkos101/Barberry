@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="container">
 	<div class="page-moniker">
-		<h2 class="">Blog | <span>Your Blog Description here</span></h2>
+		<h2 class="">Blog | <span><?php echo get_bloginfo('description'); ?></span></h2>
 		<span class="ralign breadcrumbs">HOME > <?php the_title(); ?></span>
 	</div>
 	<div class="content">
@@ -17,14 +17,14 @@
 			<div class="widget sharing">
 				<span>SHARE:</span>
 				<ul>
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/facebook-icon.png"></li>
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/twitter-icon.png"></li>
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/google-icon.png"></li>
+					<li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook-icon.png"></a></li>
+					<li><a href="https://twitter.com/home?status=<?php the_permalink(); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/twitter-icon.png"></a></li>
+					<li><a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/google-icon.png"></a></li>
 				</ul>
 			</div>
 			<div class="bottom-metadata">
-				<p class="lalign">By BarBerry Stuff</p>
-				<p class="ralign">Leave a Comment</p>
+				<p class="lalign">By <?php the_author(); ?></p>
+				<p class="ralign"><a href="#commentform">Leave a Comment</a></p>
 			</div>
 		</div>
 		<?php comment_form(); ?>

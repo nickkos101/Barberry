@@ -22,7 +22,6 @@
 				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 				<p>$<?php echo autoc_get_postdata('price'); ?></p>
 				<div class="product-metadata">
-					<p>Wishlist</p>
 					<p><a href="<?php the_permalink(); ?>">Learn more</a></p>
 				</div>
 			</div>
