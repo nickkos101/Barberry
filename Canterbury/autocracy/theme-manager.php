@@ -134,6 +134,10 @@ function main_theme_options_do_page() {
         <?php autoc_def_textfield($optionname, 'physicaladdress'); ?>
     </p>
     <p>
+        <label>Footer Copyright Text</label>
+        <?php autoc_def_textarea($optionname, 'footertext'); ?>
+    </p>
+    <p>
         <label>Google Analytics Code</label>
         <?php autoc_def_textarea($optionname, 'ganylitics'); ?>
     </p>

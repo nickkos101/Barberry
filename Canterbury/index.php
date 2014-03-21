@@ -51,7 +51,6 @@
 				<h4><?php the_title(); ?></h4>
 				<p>$<?php echo autoc_get_postdata('price'); ?></p>
 				<div class="product-metadata">
-					<p>Wishlist</p>
 					<p><a href="<?php the_permalink(); ?>">Learn more</a></p>
 				</div>
 			</div>
@@ -65,6 +64,7 @@
 	<div class="brands">
 		<?php
 		$brandlist =  get_terms('brands');
+		print_r($brandlist);
 		foreach ($brandlist as $brand) {
 
 			$t_ID = $brand->term_id;

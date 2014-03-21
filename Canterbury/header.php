@@ -37,7 +37,6 @@
 				</p>
 				<p class="left-align"><?php echo $mainoptions['contactemail']; ?> <br/><?php echo $mainoptions['physicaladdress']; ?> </p>
 				<p class="right-align">
-					<button>My Account</button>
 					<?php
 					if( function_exists('pll_the_languages') ) {
 						pll_the_languages(array('dropdown'=>1));		

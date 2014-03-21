@@ -4,7 +4,7 @@
 	<div class="single-product">
 		<div class="half-column">
 			<?php if ( has_post_thumbnail() ) {
-				the_post_thumbnail(array('class' => 'featured-img'));
+				the_post_thumbnail('full');
 			}  ?>
 		</div>
 		<div class="half-column">
@@ -14,25 +14,6 @@
 			</div>
 			<p class="price">From: <b>$<?php echo autoc_get_postdata('price'); ?></b></p>
 			<?php the_excerpt(); ?>
-			<p>
-				<label>Color</label>
-				<select>
-					<option>Black</option>
-					<option>White</option>
-					<option>Gray</option>
-				</select>
-			</p>
-			<p>
-				<label>Sizes</label>
-				<select>
-					<option>Medium</option>
-					<option>Large</option>
-					<option>XL</option>
-				</select>
-			</p>
-			<p>
-				<button>Wishlist</button>
-			</p>
 			<div class="product-data">
 				<ul>
 					<li><b>SKU:</b> <?php echo autoc_get_postdata('SKU') ?></li>
@@ -40,15 +21,15 @@
 					<li>
 						<b>Brand:</b> <?php get_brands($post->ID); ?>
 					</li>
-					<li><b>Tags:</b> Black, Polos, Men</li>
+					<li><b>Tags:</b> <?php the_tags(); ?></li>
 				</ul>
 			</div>
 			<div class="widget sharing">
 				<span>SHARE:</span>
 				<ul>
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/facebook-icon.png"></li>
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/twitter-icon.png"></li>
-					<li><img src="<?php echo get_template_directory_uri(); ?>/images/google-icon.png"></li>
+					<li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook-icon.png"></a></li>
+					<li><a href="https://twitter.com/home?status=<?php the_permalink(); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/twitter-icon.png"></a></li>
+					<li><a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/google-icon.png"></a></li>
 				</ul>
 			</div>
 		</div>
