@@ -3,9 +3,11 @@
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="single-product">
 		<div class="half-column">
+		<div class="product-img">
 			<?php if ( has_post_thumbnail() ) {
 				the_post_thumbnail('full');
 			}  ?>
+		</div>
 		</div>
 		<div class="half-column">
 			<h2><?php the_title(); ?></h2>

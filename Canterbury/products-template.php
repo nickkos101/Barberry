@@ -10,6 +10,7 @@
 		<?php query_posts(array('posts_per_page' => 4, 'post_type' => 'products')); ?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="product">
+			<div class="product-img">
 			<?php if ( has_post_thumbnail() ) {
 				the_post_thumbnail();
 			}  
@@ -17,6 +18,7 @@
 				echo '<img alt="missing" src="http://placehold.it/250">';
 			}
 			?>
+			</div>
 			<div class="product-content">
 				<span><?php $category = get_the_category(); echo $category[0]->cat_name; ?></span>
 				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>

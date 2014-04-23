@@ -39,6 +39,7 @@
 		<?php query_posts(array('post_type' => 'products', 'posts_per_page' => 4)); ?>
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<div class="product">
+			<div class="product-img">
 			<?php if ( has_post_thumbnail() ) {
 				the_post_thumbnail();
 			}  
@@ -46,6 +47,7 @@
 				echo '<img alt="missing" src="http://placehold.it/250">';
 			}
 			?>
+			</div>
 			<div class="product-content">
 				<span><?php $category = get_the_category(); echo $category[0]->cat_name; ?></span>
 				<h4><?php the_title(); ?></h4>
@@ -64,7 +66,6 @@
 	<div class="brands">
 		<?php
 		$brandlist =  get_terms('brands');
-		print_r($brandlist);
 		foreach ($brandlist as $brand) {
 
 			$t_ID = $brand->term_id;

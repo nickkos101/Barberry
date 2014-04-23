@@ -192,7 +192,7 @@ wp_enqueue_script('upload_enable', get_template_directory_uri() . 'autocracy/the
 function canterbury_taxonomy_add_new_meta_field() {
 	?>
 	<div class="form-field">
-		<label for="term_meta[taxonomy_image_url]"><?php _e( 'Example meta field', 'canterbury' ); ?></label>
+		<label for="term_meta[taxonomy_image_url]"><?php _e( 'Brand Logo', 'canterbury' ); ?></label>
 		<input class="upload_image" type="text" name="term_meta[taxonomy_image_url]" id="term_meta[taxonomy_image_url]" value="<?php echo esc_attr( $term_meta['taxonomy_image_url'] ) ? esc_attr( $term_meta['taxonomy_image_url'] ) : ''; ?>">
 		<input class="upload_image_button" type="button" value="Upload Image" />
 		<p class="description"><?php _e( 'Enter a value for this field','canterbury' ); ?></p>
